@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="myscript.js"></script>
+    <script src="https://kit.fontawesome.com/788a2099c9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+    </head>
+
+    <body>
+        <div class="myInfo">
+            <i "onclick="javascript:location.href='https://www.linkedin.com/in/kartikey-vashisht21/'" class="fab fa-linkedin fa-5x"></i>
+        </div>
+        <div class="container">
+        <h1 class="">Welcome to Kartikey's Employee Management System</h1>
+        <h2>This is a easy to use webpage for managing an employee database. <br>You can add and delete employee data.</h2>
+        <div class="add-button">
+        <button class="btn addbtn" onclick="displayForm()">ADD</button>
+        </div>
+        <div id="form-popup">
+            <form action="" class="form-container">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter Name" required>
+
+                <label for="eid">Employee ID:</label>
+                <input type="text" id="eid" placeholder="Enter Employee ID" required>
+
+                <label for="dept">Department:</label>
+                <select id="dept">
+                    <option value="Engineering">Engineering</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Human-Resource">Human Resource</option>
+                    <option value="Accounting">Accounting</option>
+                </select>
+
+                <label for="email">Email ID:</label>
+                <input type="text" id="email" placeholder="Enter Email ID" required>
+
+                <label for="doj">Date of Joining:</label>
+                <input type="date" id="doj" placeholder="Enter Date of Joining" required>
+                <div class="buttons">
+                    <button class="btn submit-btn" id="entry" type="button" onclick="addData()">Submit</button>
+                    <button class="btn reset-btn" type="reset">Clear</button>
+                    <button class="btn cancel-btn" type="button" onclick="hideForm()">Cancel</button>
+                </div>
+                
+            </div>
+            <br>
+            </form>
+        
+        <div class="table-container">
+            <table id="emp-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Employee ID</th>
+                        <th>Department</th>
+                        <th>Email ID</th>
+                        <th>Date of Joining</th>
+                        <th>Delete</th>
+                    </tr>
+            </table>
+        </div>
+        <div class="downloads">
+        <button class="btn download-btn" id="exportExcelBtn" onclick="exportXLS()">Download Table as Excel</button>
+        </div>
+        <br>
+    </div>
+</div>
+
+    
+    </body>
+</html>
